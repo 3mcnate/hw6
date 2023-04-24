@@ -87,10 +87,9 @@ std::set<std::string> boggle(const std::set<std::string>& dict, const std::set<s
 			boggleHelper(dict, prefix, board, "", result, i, j, 1, 1);
 		}
 	}
-	
+
 	return result;
 }
-
 
 bool boggleHelper(const std::set<std::string>& dict, const std::set<std::string>& prefix, const std::vector<std::vector<char> >& board, 
 								   std::string word, std::set<std::string>& result, unsigned int r, unsigned int c, int dr, int dc)
@@ -110,7 +109,7 @@ bool boggleHelper(const std::set<std::string>& dict, const std::set<std::string>
 	}
 
 	// if recursion returned true, we can go back down the call stack and don't need to check
-	// any previous words, including the current frame's word
+	// any shorter words
 	if (betterWordExists) return true;
 
 	// if recursion returned false, check if the current word is in the dictionary
