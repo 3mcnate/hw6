@@ -33,8 +33,15 @@ int main()
         cout << "Did not find: doesnotexist" << endl;
     }
     cout << "HT size: " << ht.size() << endl;
+    
+    ht.reportAll(cout);
+    
+    cout << "Removing hi7 and hi9" << endl;
     ht.remove("hi7");
     ht.remove("hi9");
+
+    ht.reportAll(cout);
+
     cout << "HT size: " << ht.size() << endl;
     if( ht.find("hi9") != nullptr ){
         cout << "Found hi9" << endl;
@@ -42,7 +49,12 @@ int main()
     else {
         cout << "Did not find hi9" << endl;
     }
+    
+    cout << "Inserting {hi7, 17}" << endl;
     ht.insert({"hi7",17});
+
+    ht.reportAll(cout);
+
     cout << "size: " << ht.size() << endl;
     return 0;
 }

@@ -20,5 +20,22 @@ int main(int argc, char* argv[])
     size_t hk = h1(k);
     // Test the hash
     cout << "h(" << k << ")=" << hk << endl;
+    
+    HASH_INDEX_T testletters[6] = {
+        h1.letterDigitToNumber('a'),
+        h1.letterDigitToNumber('b'),
+        h1.letterDigitToNumber('c'),
+        h1.letterDigitToNumber('d'),
+        h1.letterDigitToNumber('e'),
+        h1.letterDigitToNumber('f')
+    };
+    
+    cout << "abcdef = ";
+    for (int i = 0; i < 6; i++) {
+        cout << testletters[i] << " ";
+    }
+    cout << endl;
+    cout << "converted to decimal: " << h1.convertBase(testletters, 0) << endl;
+    
     return 0;
 }
