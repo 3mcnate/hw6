@@ -1,5 +1,5 @@
 CXX=g++
-CXXFLAGS=-g -Wall -std=c++11 -DRESIZEDEBUG
+CXXFLAGS=-g -Wall -std=c++11
 GTESTINCL := -I /usr/include/gtest/  
 GTESTLIBS := -lgtest -lgtest_main  -lpthread
 # Uncomment for parser DEBUG
